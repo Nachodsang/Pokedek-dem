@@ -4,7 +4,7 @@ import pokemonLogoSrc from "./assets/images/pokedex.png";
 import "antd/dist/reset.css";
 
 import { Button } from "@atomic";
-import { PokemonInfoPage, SearchPage } from "@atomic";
+import { PokemonInfoPage, SearchPage, Test, Test2 } from "@atomic";
 
 function App() {
   return (
@@ -12,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<SearchPage />} />
         <Route path="pokemon" element={<PokemonInfoPage />} />
+        <Route path="test" element={<Test />} />
+        <Route path="test2" element={<Test2 />} />
       </Routes>
     </BrowserRouter>
   );
