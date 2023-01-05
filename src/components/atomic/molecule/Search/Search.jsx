@@ -18,11 +18,12 @@ const StyleDiv = styled.div`
   }
 `;
 
-function Search({ label, placeholder, ...props }) {
+function Search({ label, placeholder, onChange, ...props }) {
   const [value, setValue] = useState("");
 
   const onSearchChange = (value) => {
     setValue(value);
+    onChange?.(value);
   };
   return (
     <StyleDiv>
@@ -31,7 +32,7 @@ function Search({ label, placeholder, ...props }) {
         <Input
           value={value}
           onSearchChange={onSearchChange}
-          placeHolder={placeholder}
+          placeholder={placeholder}
           {...props}
         />
       </div>

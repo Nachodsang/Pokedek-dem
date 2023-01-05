@@ -1,7 +1,7 @@
 import { Text, DropdownMenu } from "@atomic";
 import styled from "styled-components";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const StyledDiv = styled.div`
   display: inline-flex;
@@ -18,7 +18,8 @@ const StyledDiv = styled.div`
     }
   }
 `;
-function FilterDropdown({ label = "label", items = [] }) {
+
+function FilterDropdown({ label = "label", items = [], onChange }) {
   const [selectedItem, setSelectedItem] = useState(items[0]);
 
   // confusing function ***
@@ -26,7 +27,18 @@ function FilterDropdown({ label = "label", items = [] }) {
   //getting item from children then setSelectedItem(item)
   const onItemSelect = ({ item }) => {
     setSelectedItem(item);
+    onChange?.(item);
   };
+
+  useEffect(() => {
+    if (!items) return;
+
+    const defaultItem = items[0];
+    onItemSelect({ item: defaultItem });
+
+    console.log("errct run", defaultItem);
+  }, [items]);
+
   return (
     <StyledDiv>
       <Text fontSize="1.4rem">{label}</Text>
