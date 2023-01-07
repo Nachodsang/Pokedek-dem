@@ -1,5 +1,12 @@
 import React from "react";
-import { Logo, FilterDropdown, DropdownMenu, Search } from "@atomic";
+import {
+  Logo,
+  FilterDropdown,
+  DropdownMenu,
+  Search,
+  PokemonCard,
+} from "@atomic";
+import { pokemonInfo } from "@/utils";
 import styled from "styled-components";
 import { Row, Col } from "antd";
 
@@ -17,6 +24,13 @@ const StyledRow = styled(Row)`
   margin: auto;
   margin-top: 2.5rem;
   padding: 2rem;
+`;
+
+const PokemonContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  justify-content: space-around;
 `;
 const regionDropdownItems = regions.map((r) => {
   console.log(r.name); //log to see value passed down
@@ -48,6 +62,7 @@ const getFetchPokemonoFilters = (filters) => {
 function SearchPage() {
   const [filter, setFilter] = useState({});
 
+  //tbd *****
   const onFilterChange = (key, value) => {
     setFilter((prevFilter) => {
       return {
@@ -94,6 +109,11 @@ function SearchPage() {
           </div>
         </Col>
       </StyledRow>
+      <PokemonContainer>
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((x) => (
+          <PokemonCard key={x} pokemon={pokemonInfo} />
+        ))}
+      </PokemonContainer>
     </Container>
   );
 }
