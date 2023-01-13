@@ -23,7 +23,7 @@ function PokemonInfo({ pokemon }) {
       <Text fontSize="1rem">#{pokemon?.id}</Text>
       <Text fontSize="1rem">Name: {pokemon?.name}</Text>
       <StyledImage>
-        <img src={pokemon?.images} width="100%" />
+        <img src={pokemon?.image} width="100%" />
       </StyledImage>
       <Text fontSize="0.8rem">Height: {getHeight(pokemon?.height)}</Text>
       <Text fontSize="0.8rem">Weight: {getWeight(pokemon?.weight)}</Text>
