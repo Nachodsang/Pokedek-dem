@@ -19,7 +19,7 @@ function PokemonCard({ pokemon }) {
   const handleOnIconInfoClick = () => {
     navigate(`/pokemon?id=${pokemon?.id}`, { replace: true });
   };
-  console.log(bgColors);
+  // console.log(bgColors);
 
   const icons = (
     <div>
@@ -43,7 +43,7 @@ function PokemonCard({ pokemon }) {
         hoverable
       >
         <StyledImage>
-          <img src={pokemon?.images} width={"100%"} />
+          <img src={pokemon?.image} width={"100%"} height="150px" />
         </StyledImage>
         <Text fontSize="1.2rem">{pokemon?.name}</Text>
       </Card>

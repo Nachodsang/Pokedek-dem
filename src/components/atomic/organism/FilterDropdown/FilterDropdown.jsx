@@ -36,13 +36,13 @@ function FilterDropdown({ label = "label", items = [], onChange }) {
     const defaultItem = items[0];
     onItemSelect({ item: defaultItem });
 
-    console.log("errct run", defaultItem);
+    // console.log("errct run", defaultItem);
   }, [items]);
 
   return (
     <StyledDiv>
       <Text fontSize="1.4rem">{label}</Text>
-
+      {/* <Text fontSize="2rem">{label}</Text> */}
       <div className="dropdown-wrapper">
         <DropdownMenu
           value={selectedItem}
