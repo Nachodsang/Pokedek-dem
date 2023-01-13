@@ -1,5 +1,6 @@
 import React from "react";
 import { Input as InputAntd } from "antd";
+import "antd/dist/reset.css";
 
 function Input({ value, onSearchChange, placeholder = "typing...", ...props }) {
   const handleOnInputChange = (e) => {
