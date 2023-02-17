@@ -5,6 +5,7 @@ import "antd/dist/reset.css";
 
 const StyledText = styled(TextAntd)`
   font-size: ${({ fontSize }) => fontSize || "1.6rem"};
+  color: ${({ color }) => color || "black"};
 `;
 
 const Text = ({ children, style, ...props }) => {

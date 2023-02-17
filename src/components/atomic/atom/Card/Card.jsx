@@ -8,7 +8,7 @@ const StyledCard = styled(CardAntd)`
   background: ${({ bgColors }) =>
     `linear-gradient(${bgColors[0]}, ${bgColors[1]})`};
 
-  border: 2px solid yellow;
+  border: 6px solid #396bba;
 
   .ant-card-body {
     padding: 0;

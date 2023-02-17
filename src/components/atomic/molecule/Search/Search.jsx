@@ -27,7 +27,9 @@ function Search({ label, placeholder, onChange, ...props }) {
   };
   return (
     <StyleDiv>
-      <Text fontSize="1.4rem">{label}</Text>
+      <Text fontSize="1.4rem" color="white">
+        {label}
+      </Text>
       <div className="search-input-wrapper">
         <Input
           value={value}
