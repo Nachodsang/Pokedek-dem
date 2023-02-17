@@ -31,8 +31,9 @@ body {
   line-height: 1.6;
   font-size: 1.6rem;
 
-  background-image: url("./assets/images/bg.png");
-  background-repeat: repeat;
+  background-image: url("./assets/images/pokeCards.png");
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
 code {

@@ -41,7 +41,9 @@ function FilterDropdown({ label = "label", items = [], onChange }) {
 
   return (
     <StyledDiv>
-      <Text fontSize="1.4rem">{label}</Text>
+      <Text fontSize="1.4rem" color="white">
+        {label}
+      </Text>
       {/* <Text fontSize="2rem">{label}</Text> */}
       <div className="dropdown-wrapper">
         <DropdownMenu

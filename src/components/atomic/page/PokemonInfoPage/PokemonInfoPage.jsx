@@ -76,7 +76,7 @@ function PokemonInfoPage() {
   }
   return (
     <div>
-      <Text>Pokemon info Page : {id}</Text>
+      <Text color="white">Pokemon info Page : {id}</Text>
       <Wrapper>
         <Card
           bgColors={bgColors}
